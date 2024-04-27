@@ -1,18 +1,75 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  
+  switch(data.license){
+    case 'MIT': 
+      data.license = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+      break;
+  
+    case 'The Unlicense':
+      data.license = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+      break;
+  
+    case 'Mozilla Public License 2.0':
+      data.license = "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+      break;
+  
+    default:
+      console.log("No license selected")
+      break;
+  }
+
+  const readME = `
+  # ${data.title}
+
+  ${data.license}
+
+  ## Description
+
+    ${data.description}
+
+  ## Table of contents
+
+  [Description](#description)
+
+  [Installation](#installation)
+
+  [Usage](#usage)
+
+  [license](#license)
+
+  [Contributing](#Contributing)
+
+  [tests](#tests)
+
+  [Questions](#Questions)
+
+  ## Installation
+
+  ${data.installation}
+
+  ## Usage
+
+  ${data.usage}
+
+  ## license
+
+  ${data.license}
+
+  ## Contributing
+
+  ${data.contributing}
+
+  ## tests  
+
+  ${data.tests}
+
+  ## Questions 
+
+  [github](https://www.github.com/${data.github})
+
+  ${data.email}
 
 `;
 }

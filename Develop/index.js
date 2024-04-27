@@ -1,11 +1,10 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { transferableAbortSignal } = require('util');
-const path = require('path');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-
+const questions = () =>
 inquirer
   .prompt([
     {
@@ -27,42 +26,49 @@ inquirer
       type: "input",
       name: "usage",
       message: "What is the project going to be used for?"
-    }
+    },
+    {
+      type: "list",
+      name: "license",
+      message: "What is the project going to be used for?",
+      choices: ["MIT", "The Unlicense", "Mozilla Public License 2.0"]
+    },
+    {
+      type: "input",
+      name: "contributing",
+      message: "What is the project going to be used for?"
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "What is the project going to be used for?"
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "What is your github username?"
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is your github email?"
+    },
 
   ])
 
-// TODO: Create a function to write README file
 
-//unsure if i need this below at the moment.
+function writeToFile(filename, data) {
 
-// const readME = `
-// #Title
-// ## Description
-// ## Table of contents
-// ## Installation
-// ## Usage
-// ## license
-// ## Contributing
-// ## tests 
-// ## Questions
-// `
 
-fs.writeFile('README.md', readME, (error) =>
-  error ? console.error(error) : console.log('It did it!')
-)
-// function writeToFile("readMe.md", data) {
-if (err) {
-  return console.log(err);
+  fs.writeFile(filename, generateMarkdown(data), (error) =>
+    error ? console.error(error) : console.log('It did it!')
+  )
 }
-console.log('readMe is ready to view')
 
+function init() {
+  questions().then( (data) => {
+    writeToFile("README.md", data)
+  })
+}
 
-fs.writeFile("README.md", writeToFile, function (err) {
-  if (err) return console.log("something is wrong")
-})
-
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
 init();
