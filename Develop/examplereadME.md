@@ -5,7 +5,7 @@
 
   ## Description
 
-    test
+    this is a test
 
   ## Table of contents
 
@@ -17,19 +17,19 @@
 
   [license](#license)
 
-  [Contributing](#Contributing)
+  [Contributing](#contributing)
 
   [tests](#tests)
 
-  [Questions](#Questions)
+  [Questions](#questions)
 
   ## Installation
 
-  test
+  inquirer
 
   ## Usage
 
-  test
+  testing purposes
 
   ## license
 
@@ -37,15 +37,15 @@
 
   ## Contributing
 
-  test
+  myself
 
   ## tests  
 
-  test
+  nope
 
   ## Questions 
 
-  [github](https://www.github.com/test)
+  [github](https://www.github.com/idk)
 
-  test
+  idk
 

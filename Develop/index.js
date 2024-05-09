@@ -30,18 +30,18 @@ inquirer
     {
       type: "list",
       name: "license",
-      message: "What is the project going to be used for?",
+      message: "What kind of license is required?",
       choices: ["MIT", "The Unlicense", "Mozilla Public License 2.0"]
     },
     {
       type: "input",
       name: "contributing",
-      message: "What is the project going to be used for?"
+      message: "Who is contributing?"
     },
     {
       type: "input",
       name: "tests",
-      message: "What is the project going to be used for?"
+      message: "Are there any tests needed?"
     },
     {
       type: "input",
@@ -54,20 +54,20 @@ inquirer
       message: "What is your github email?"
     },
 
-  ])
+  ]);
 
 
 function writeToFile(filename, data) {
 
 
   fs.writeFile(filename, generateMarkdown(data), (error) =>
-    error ? console.error(error) : console.log('It did it!')
+    error ? console.log(error) : console.log('It did it!')
   )
 }
 
 function init() {
   questions().then( (data) => {
-    writeToFile("README.md", data)
+    writeToFile("examplereadME.md", data)
   })
 }
 

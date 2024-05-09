@@ -39,11 +39,11 @@ function generateMarkdown(data) {
 
   [license](#license)
 
-  [Contributing](#Contributing)
+  [Contributing](#contributing)
 
   [tests](#tests)
 
-  [Questions](#Questions)
+  [Questions](#questions)
 
   ## Installation
 
@@ -72,6 +72,8 @@ function generateMarkdown(data) {
   ${data.email}
 
 `;
+return readME
 }
 
 module.exports = generateMarkdown;
+
