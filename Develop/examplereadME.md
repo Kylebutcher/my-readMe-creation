@@ -1,11 +1,11 @@
 
-  # test
+  # Submission
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
-    this is a test
+    This is a example text for submitting my homework to put text into the generated read me
 
   ## Table of contents
 
@@ -25,11 +25,11 @@
 
   ## Installation
 
-  inquirer
+  
 
   ## Usage
 
-  testing purposes
+  this project is just used for showing my homework assignment for school!
 
   ## license
 
@@ -37,15 +37,15 @@
 
   ## Contributing
 
-  myself
+  me
 
   ## tests  
 
-  nope
+  no
 
   ## Questions 
 
-  [github](https://www.github.com/idk)
+  [github](https://www.github.com/Kylebutcher)
 
-  idk
+  kylembutcher97@gmail.com
 
